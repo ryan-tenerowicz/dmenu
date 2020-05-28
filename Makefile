@@ -41,9 +41,9 @@ dist: clean
 	rm -rf dmenu-$(VERSION)
 
 install: all
-	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	cp -f dmenu $(DESTDIR)$(PREFIX)/bin
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu
+	mkdir -p /usr/bin
+	cp -f dmenu /usr/bin
+	chmod 755 /usr/bin/dmenu
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	sed "s/VERSION/$(VERSION)/g" < dmenu.1 > $(DESTDIR)$(MANPREFIX)/man1/dmenu.1
 	sed "s/VERSION/$(VERSION)/g" < stest.1 > $(DESTDIR)$(MANPREFIX)/man1/stest.1
